@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'package:tipitaka_myanmar/features/settings/presentation/pages/settings_screen.dart';
 
 class SideDrawer extends StatelessWidget {
-  const SideDrawer({Key? key}) : super(key: key);
+  const SideDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,7 @@ class SideDrawer extends StatelessWidget {
                 ),
                 SizedBox(height: 8),
                 Text(
-                  'ပိဋကတ် ၃ ပုံ မြန်မာ',
+                  'ပိဋကတ် ၃ ပုံ မြန်မာပြန်',
                   style: TextStyle(color: Colors.white70, fontSize: 16),
                 ),
               ],

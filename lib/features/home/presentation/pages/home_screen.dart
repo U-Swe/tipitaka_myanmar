@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'pitaka_detail_screen.dart';
 import '../widgets/side_drawer.dart';
+import 'pitaka_detail_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +15,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.brown,
         foregroundColor: Colors.white,
       ),
-      drawer:
-          const SideDrawer(), // အပေါ်တွင် ရေးခဲ့သော Drawer ကို ချိတ်ဆက်ခြင်း
+      drawer: const SideDrawer(),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
@@ -28,8 +27,11 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  // UI Code များကို သပ်ရပ်စေရန် Custom Widget ထုတ်ထားခြင်း
-  Widget _buildPitakaCard(BuildContext context, String title, IconData icon) {
+  Widget _buildPitakaCard(
+    BuildContext context,
+    String pitakaTitle,
+    IconData icon,
+  ) {
     return Card(
       elevation: 2,
       margin: const EdgeInsets.only(bottom: 16),
@@ -37,9 +39,8 @@ class HomeScreen extends StatelessWidget {
       child: InkWell(
         borderRadius: BorderRadius.circular(12),
         onTap: () {
-          // သက်ဆိုင်ရာ Title အလိုက် Sub Category များ သတ်မှတ်ခြင်း
           List<String> subCategories = [];
-          if (title == 'ဝိနည်းပိဋကတ်') {
+          if (pitakaTitle == 'ဝိနည်းပိဋကတ်') {
             subCategories = [
               '၁။ ပါရာဇိက',
               '၂။ သံဃာဒိသိသ်',
@@ -47,7 +48,7 @@ class HomeScreen extends StatelessWidget {
               '၄။ နိဿဂ္ဂိယ',
               '၅။ ဝိနယပိဋက',
             ];
-          } else if (title == 'သုတ္တန္တပိဋကတ်') {
+          } else if (pitakaTitle == 'သုတ္တန္တပိဋကတ်') {
             subCategories = [
               '၁။ ဒီဃနိကာယ',
               '၂။ မဇ္ဈိမနိကာယ',
@@ -55,21 +56,22 @@ class HomeScreen extends StatelessWidget {
               '၄။ အင်္ဂုတ္တရနိကာယ',
               '၅။ ခုဒ္ဒကနိကာယ',
             ];
-          } else if (title == 'အဘိဓမ္မပိဋကတ်') {
+          } else if (pitakaTitle == 'အဘိဓမ္မပိဋကတ်') {
             subCategories = [
               '၁။ ဓမ္မသင်္ဂဏီ',
               '၂။ ဝိဘင်္ဂ',
-              '၃။ ဓာတုကထာ',
+              '၃။ ပုဂ္ဂလပညတ်',
               '၄။ ကထာဝတ္ထု',
             ];
           }
 
-          // PitakaDetailScreen သို့ ကူးပြောင်းခြင်း
           Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) => PitakaDetailScreen(
-                title: title,
+                pitakaTitle: pitakaTitle,
+                title: pitakaTitle,
+                fileName: 'test.json',
                 subCategories: subCategories,
               ),
             ),
@@ -83,7 +85,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(width: 16),
               Expanded(
                 child: Text(
-                  title,
+                  pitakaTitle,
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
