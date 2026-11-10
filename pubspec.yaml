@@ -39,12 +39,14 @@ dependencies:
   hive_flutter: ^1.1.0
   shared_preferences: ^2.5.6
   path_provider: ^2.1.6
-  rabbit_converter: ^2.0.0
+
+  # PDF Viewer အတွက် Package ကို ဤနေရာ (dependencies အောက်) သို့ ပြောင်းရွှေ့ထားပါသည်
+  syncfusion_flutter_pdfviewer: ^24.1.41 # အောက်က dev_dependencies မှ ပြောင်းရွှေ့လာခြင်းဖြစ်ပါသည်
+  http: ^1.2.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your

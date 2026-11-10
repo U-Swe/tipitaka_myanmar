@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:tipitaka_myanmar/features/reader/presentation/pages/reader_screen.dart';
 
 // Data များကို ဤဖိုင်ထဲတွင်ပင် တစ်ခါတည်း ကြေညာထားပါသည်
+// JSON အစား PDF ဖိုင်အမည်များကို ပြောင်းလဲသတ်မှတ်ထားပါသည်
 final List<Map<String, String>> pitakaIndexList = [
-  {'title': '၁။ ပဌမအနိယတသိက္ခာပုဒ်', 'fileName': '1010100.json'},
-  {'title': '၂။ ဒုတိယအနိယတသိက္ခာပုဒ်', 'fileName': '1010200.json'},
-  {'title': ' အနိယတသိက္ခာပုဒ်  အကျဥ်းချုပ်', 'fileName': '1010300.json'},
-  {'title': '၄။ စတုတ္ထ ပါရာဇိက', 'fileName': '1010400.json'},
-  {'title': 'ပါရာဇိက အကျဥ်းချုပ်', 'fileName': '1010500.json'},
+  {'title': '၁။ ပဌမ ပါရာဇိက', 'fileName': '1010100.pdf'},
+  {'title': '၂။ ဒုတိယ ပါရာဇိက', 'fileName': '1010200.pdf'},
+  {'title': '၃။ တတိယ ပါရာဇိက', 'fileName': '1010300.pdf'},
+  {'title': '၄။ စတုတ္ထ ပါရာဇိက', 'fileName': '1010400.pdf'},
+  {'title': 'ပါရာဇိက အကျဉ်းချုပ်', 'fileName': '1010500.pdf'},
 ];
 
 class PitakaListScreen extends StatelessWidget {
@@ -18,7 +19,8 @@ class PitakaListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('pitakaTitle'),
+        // pitakaTitle ဟု အသေမထားဘဲ အမှန်တကယ် ပေါ်စေချင်သော ခေါင်းစဉ်ကို ထည့်ပါ
+        title: const Text('ဝိနည်းပိဋကတ်'),
         backgroundColor: Colors.brown,
         foregroundColor: Colors.white,
       ),
@@ -48,10 +50,11 @@ class PitakaListScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => ReaderScreen(
-                      pitakaTitle: 'pitakaTitle',
-                      subTitle: item['title']!, // ပြင်ဆင်ထားသော အပိုင်း: မှန်ကန်သော 'title' key ကို ခေါ်ယူထားပါသည်
-                      chapterTitle: item['title']!, // ပြင်ဆင်ထားသော အပိုင်း: မှန်ကန်သော 'title' key ကို ခေါ်ယူထားပါသည်
-                      fileName: item['fileName']!, // မှန်ကန်သော 'fileName' key ကို ခေါ်ယူထားပါသည်
+                      pitakaTitle:
+                          'ဝိနည်းပိဋကတ်', // သက်ဆိုင်ရာ ပိဋကတ်အမည်ကို ထည့်ပါ
+                      subTitle: item['title']!, // မှန်ကန်သော 'title' key ကို ခေါ်ယူထားပါသည်
+                      chapterTitle: item['title']!, // မှန်ကန်သော 'title' key ကို ခေါ်ယူထားပါသည်
+                      fileName: item['fileName']!, // '1010100.pdf' စသည့် မှန်ကန်သော 'fileName' key ကို ခေါ်ယူထားပါသည်
                     ),
                   ),
                 );

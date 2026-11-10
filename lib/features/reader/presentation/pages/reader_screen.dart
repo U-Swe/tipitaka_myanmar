@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:tipitaka_myanmar/core/theme/settings_provider.dart';
+// book_repository.dart ကို မှန်ကန်စွာ Import လုပ်ထားခြင်း
 import 'package:tipitaka_myanmar/features/reader/data/book_repository.dart';
 
 class ReaderScreen extends ConsumerStatefulWidget {
   final String pitakaTitle;
   final String subTitle;
   final String chapterTitle;
-  final String fileName; // JSON ဖိုင်နာမည်ကို လက်ခံရန်
+  final String fileName;
 
   const ReaderScreen({
     super.key,
@@ -22,23 +24,18 @@ class ReaderScreen extends ConsumerStatefulWidget {
 }
 
 class _ReaderScreenState extends ConsumerState<ReaderScreen> {
+  final PdfViewerController _pdfViewerController = PdfViewerController();
+
   @override
   Widget build(BuildContext context) {
-    // Breadcrumb Title ဖန်တီးခြင်း
     final String breadcrumbTitle =
-        '${widget.pitakaTitle} \\ ${widget.subTitle} \\ ${widget.chapterTitle}';
+        '${widget.pitakaTitle} \\ ${widget.chapterTitle}';
 
-    // Provider မှ Font Size ကို ဖတ်ယူခြင်း
-    final fontSize = ref.watch(fontSizeProvider);
+    // Font Size / Zoom အတွက်
+    ref.watch(fontSizeProvider);
 
-    // ရွေးချယ်ထားသော ခေါင်းစဉ်အလိုက် Data ကို လှမ်းခေါ်ခြင်း
-    // Provider သို့ fileName နှင့် chapterTitle နှစ်ခုလုံးကို Record/Map အနေဖြင့် ပို့ပေးပါသည်
-    final contentAsyncValue = ref.watch(
-      chapterContentProvider({
-        'fileName': widget.fileName,
-        'chapterTitle': widget.chapterTitle,
-      }),
-    );
+    // pdfBytesProvider ကို လှမ်းခေါ်ခြင်း (ယခုအခါ Error မတက်တော့ပါ)
+    final pdfBytesAsyncValue = ref.watch(pdfBytesProvider(widget.fileName));
 
     return Scaffold(
       appBar: AppBar(
@@ -54,29 +51,40 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen> {
         foregroundColor: Colors.white,
         actions: [
           IconButton(
-            icon: const Icon(Icons.text_increase),
+            icon: const Icon(Icons.zoom_in),
             onPressed: () {
-              // Font Size ကို Provider (Notifier) မှတစ်ဆင့် တိုး/လျှော့ လုပ်ခြင်း
-              double currentSize = ref.read(fontSizeProvider);
-              double nextSize = currentSize >= 28.0 ? 16.0 : currentSize + 2.0;
-              ref.read(fontSizeProvider.notifier).updateSize(nextSize);
+              _pdfViewerController.zoomLevel =
+                  _pdfViewerController.zoomLevel + 0.5;
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.zoom_out),
+            onPressed: () {
+              _pdfViewerController.zoomLevel =
+                  (_pdfViewerController.zoomLevel - 0.5).clamp(
+                    1.0,
+                    double.infinity,
+                  );
             },
           ),
         ],
       ),
-      // FutureProvider မှ ရရှိလာမည့် အခြေအနေ (၃) ရပ်ကို ကိုင်တွယ်ခြင်း
-      body: contentAsyncValue.when(
-        data: (content) => SingleChildScrollView(
-          padding: const EdgeInsets.all(16.0),
-          child: Text(
-            content,
-            style: TextStyle(fontSize: fontSize, height: 2.0),
-            textAlign: TextAlign.justify,
-          ),
-        ),
+      body: pdfBytesAsyncValue.when(
+        data: (pdfBytes) {
+          return SfPdfViewer.memory(
+            pdfBytes,
+            controller: _pdfViewerController,
+            canShowScrollHead: false,
+            onDocumentLoadFailed: (PdfDocumentLoadFailedDetails details) {
+              print('>>> PDF Load Failed: ${details.error}');
+              print('>>> Description: ${details.description}');
+            },
+          );
+        },
         loading: () =>
             const Center(child: CircularProgressIndicator(color: Colors.brown)),
-        error: (err, stack) => Center(child: Text('Error: $err')),
+        error: (err, stack) =>
+            Center(child: Text('Error: PDF ဖိုင် ဖွင့်၍မရပါ။ \n$err')),
       ),
     );
   }

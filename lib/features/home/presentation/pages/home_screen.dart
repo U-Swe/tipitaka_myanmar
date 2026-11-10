@@ -71,7 +71,7 @@ class HomeScreen extends StatelessWidget {
               builder: (context) => PitakaDetailScreen(
                 pitakaTitle: pitakaTitle,
                 title: pitakaTitle,
-                fileName: 'test.json',
+                fileName: '1010100.pdf',
                 subCategories: subCategories,
               ),
             ),
