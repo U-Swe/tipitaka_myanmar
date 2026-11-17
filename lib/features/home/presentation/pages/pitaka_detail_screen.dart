@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 // ReaderScreen လမ်းကြောင်းကို မှန်ကန်စွာ Import ခေါ်ပါ
+import 'package:tipitaka_myanmar/features/home/data/pitaka_data.dart';
 import 'package:tipitaka_myanmar/features/reader/presentation/pages/reader_screen.dart';
 
 class PitakaDetailScreen extends StatelessWidget {
   final String pitakaTitle; // အဓိက ပိဋကတ်ခေါင်းစဉ် (ReaderScreen သို့ ပို့ရန်)
   final String title;
-  final String fileName; // JSON ဖိုင်နာမည် (ReaderScreen သို့ ပို့ရန်)
   final List<String> subCategories;
 
   const PitakaDetailScreen({
     super.key,
     required this.pitakaTitle,
     required this.title,
-    required this.fileName,
     required this.subCategories,
   });
 
@@ -47,6 +46,7 @@ class PitakaDetailScreen extends StatelessWidget {
 
               if (subTitle.contains('၁။ ပါရာဇိက')) {
                 chapters = [
+                  'ပါရာဇိက',
                   '၁။ ပဌမ ပါရာဇိက',
                   '၂။ ဒုတိယ ပါရာဇိက',
                   '၃။ တတိယ ပါရာဇိက',
@@ -133,6 +133,7 @@ class PitakaDetailScreen extends StatelessWidget {
                 ];
               } else if (subTitle.contains('ဘိက္ခုဝိဘင်း')) {
                 chapters = [
+                  'ဘိက္ခုဝိဘင်း',
                   '၀၁။ မုသာဝါဒဝဂ်',
                   '၀၂။ ဘူတဂါမဝဂ်',
                   '၀၃။ ဩဝါဒဝဂ်',
@@ -155,6 +156,7 @@ class PitakaDetailScreen extends StatelessWidget {
                 ];
               } else if (subTitle.contains('မဟာဝဂ္ဂ')) {
                 chapters = [
+                  'မဟာဝဂ္ဂ',
                   '၀၁။ မဟာခန္ဓက',
                   '၀၂။ ဥပေါသထက္ခန္ဓက',
                   '၀၃။ ဝဿူပနာယိကက္ခန္ဓက',
@@ -168,6 +170,7 @@ class PitakaDetailScreen extends StatelessWidget {
                 ];
               } else if (subTitle.contains('စူဠဝဂ္ဂ')) {
                 chapters = [
+                  'စူဠဝဂ္ဂ',
                   '၀၁။ ကမ္မက္ခန္ဓက',
                   '၀၂။ ပါရိဝါသိကက္ခန္ဓက',
                   '၀၃။ သမုစ္စယက္ခန္ဓက',
@@ -182,7 +185,11 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၁၂။ သတ္တသတိကာက္ခန္ဓက',
                 ];
               } else if (subTitle.contains('ပရိဝါရ')) {
-                chapters = ['သမုဋ္ဌာန် ခေါင်းစဥ် အကျဥ်း', 'အန္တရပေယျာလ'];
+                chapters = [
+                  'ပရိဝါရ',
+                  'သမုဋ္ဌာန် ခေါင်းစဥ် အကျဥ်း',
+                  'အန္တရပေယျာလ',
+                ];
               } else if (subTitle.contains('သုတ္တန္တပိဋက')) {
                 chapters = [
                   'ဒီဃနိကာယ',
@@ -200,6 +207,7 @@ class PitakaDetailScreen extends StatelessWidget {
                 ];
               } else if (subTitle.contains('သီလက္ခန္ဓဝဂ္ဂ')) {
                 chapters = [
+                  'သီလက္ခန္ဓဝဂ္ဂ',
                   '၀၁။ ဗြဟ္မဇာလသုတ်',
                   '၀၂။ သာမညဖလသုတ်',
                   '၀၃။ အမ္ဗဋ္ဌသုတ်',
@@ -216,6 +224,7 @@ class PitakaDetailScreen extends StatelessWidget {
                 ];
               } else if (subTitle.contains('မဟာဝဂ္ဂ')) {
                 chapters = [
+                  'မဟာဝဂ္ဂ',
                   '၀၁။ မဟာပဒါနသုတ်',
                   '၀၂။ မဟာနိဒါနသုတ်',
                   '၀၃။ မဟာပရိနိဗ္ဗာနသုတ်',
@@ -229,6 +238,7 @@ class PitakaDetailScreen extends StatelessWidget {
                 ];
               } else if (subTitle.contains('ပါထိကဝဂ္ဂ')) {
                 chapters = [
+                  'ပါထိကဝဂ္ဂ',
                   '၀၁။ ပါထိကသုတ်',
                   '၀၂။ ဥဒုမ္ဗရိကသုတ်',
                   '၀၃။ စက္ကဝတ္တိသုတ်',
@@ -284,6 +294,7 @@ class PitakaDetailScreen extends StatelessWidget {
                 chapters = ['ဓမ္မသင်္ဂဏီ', 'ဝိဘင်္ဂ', 'ပုဂ္ဂလပညတ်', 'ကထာဝတ္ထု'];
               } else if (subTitle.contains('ဓမ္မသင်္ဂဏီ')) {
                 chapters = [
+                  'ဓမ္မသင်္ဂဏီ',
                   'မာတိကာ',
                   '၁။ စိတ္တုပ္ပါဒကဏ္ဍ',
                   '၂။ ရူပကဏ္ဍ',
@@ -312,9 +323,10 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၁၈။ ဓမ္မဟဒယ ဝိဘင်္ဂ',
                 ];
               } else if (subTitle.contains('ပုဂ္ဂလပညတ်')) {
-                chapters = ['မာတိကာ', 'နိဒ္ဒေသ'];
+                chapters = ['ပုဂ္ဂလပညတ်', 'မာတိကာ', 'နိဒ္ဒေသ'];
               } else if (subTitle.contains('ကထာဝတ္ထု')) {
                 chapters = [
+                  'ကထာဝတ္ထု',
                   '၀၁။ ပုဂ္ဂလကထာ',
                   '၀၂။ ဒုတိယဝဂ်',
                   '၀၃။ တတိယဝဂ်',
@@ -363,21 +375,30 @@ class PitakaDetailScreen extends StatelessWidget {
                       pitakaTitle:
                           pitakaTitle, // မူလ Title ကို ဆက်လက်သယ်ဆောင်သွားရန်
                       title: subTitle,
-                      fileName: fileName, // ဖိုင်နာမည်ကို အဆင့်ဆင့် ဆက်လက်သယ်ဆောင်သွားရန်
                       subCategories: chapters,
                     ),
                   ),
                 );
               } else {
-                // Chapter ထပ်မရှိတော့ပါက စာဖတ်ရန် (Reader Screen) ဆီသို့ တိုက်ရိုက်သွားရန် ပြင်ဆင်ထားပါသည်
+                final matchedFile = PitakaData.fileNameForSubtitle(
+                  pitakaTitle,
+                  subTitle,
+                );
+                if (matchedFile == null) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('PDF မတွေ့ပါ: $subTitle')),
+                  );
+                  return;
+                }
+
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => ReaderScreen(
                       pitakaTitle: pitakaTitle,
-                      subTitle: title, // ယခင် Screen မှ title ကို subTitle အဖြစ်သတ်မှတ်ပါသည်
-                      chapterTitle: subTitle, // ယခုနှိပ်လိုက်သော စာကြောင်းကို chapterTitle အဖြစ်သတ်မှတ်ပါသည်
-                      fileName: fileName, // အရေးကြီးဆုံး: Reader Screen က JSON ဖတ်ရန် လှမ်းပို့ပေးပါသည်
+                      subTitle: title,
+                      chapterTitle: subTitle,
+                      fileName: matchedFile,
                     ),
                   ),
                 );

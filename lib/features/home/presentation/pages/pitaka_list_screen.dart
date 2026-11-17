@@ -1,33 +1,32 @@
+// ဖိုင်လမ်းကြောင်း: lib/features/home/presentation/pages/pitaka_list_screen.dart
+
 import 'package:flutter/material.dart';
-// ReaderScreen ကို Package လမ်းကြောင်းဖြင့် တိုက်ရိုက်လှမ်းခေါ်ခြင်း
 import 'package:tipitaka_myanmar/features/reader/presentation/pages/reader_screen.dart';
 
-// Data များကို ဤဖိုင်ထဲတွင်ပင် တစ်ခါတည်း ကြေညာထားပါသည်
-// JSON အစား PDF ဖိုင်အမည်များကို ပြောင်းလဲသတ်မှတ်ထားပါသည်
-final List<Map<String, String>> pitakaIndexList = [
-  {'title': '၁။ ပဌမ ပါရာဇိက', 'fileName': '1010100.pdf'},
-  {'title': '၂။ ဒုတိယ ပါရာဇိက', 'fileName': '1010200.pdf'},
-  {'title': '၃။ တတိယ ပါရာဇိက', 'fileName': '1010300.pdf'},
-  {'title': '၄။ စတုတ္ထ ပါရာဇိက', 'fileName': '1010400.pdf'},
-  {'title': 'ပါရာဇိက အကျဉ်းချုပ်', 'fileName': '1010500.pdf'},
-];
-
 class PitakaListScreen extends StatelessWidget {
-  const PitakaListScreen({super.key});
+  // အရှေ့စာမျက်နှာမှ လှမ်းပို့ပေးမည့် Variable များ
+  final String pitakaTitle;
+  final List> bookList;
+
+  const PitakaListScreen({
+    super.key,
+    required this.pitakaTitle,
+    required this.bookList,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // pitakaTitle ဟု အသေမထားဘဲ အမှန်တကယ် ပေါ်စေချင်သော ခေါင်းစဉ်ကို ထည့်ပါ
-        title: const Text('ဝိနည်းပိဋကတ်'),
+        // Variable ကို အသုံးပြုထားသဖြင့် 'ဝိနည်း' နှိပ်လျှင် 'ဝိနည်းပိဋကတ်'၊ 'သုတ္တန္တ' နှိပ်လျှင် 'သုတ္တန္တပိဋကတ်' ဟု အလိုအလျောက် ပြောင်းလဲပေါ်မည်ဖြစ်သည်
+        title: Text(pitakaTitle),
         backgroundColor: Colors.brown,
         foregroundColor: Colors.white,
       ),
       body: ListView.builder(
-        itemCount: pitakaIndexList.length,
+        itemCount: bookList.length,
         itemBuilder: (context, index) {
-          final item = pitakaIndexList[index];
+          final item = bookList[index];
 
           return Card(
             margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -45,16 +44,14 @@ class PitakaListScreen extends StatelessWidget {
               ),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () {
-                // Button နှိပ်လိုက်ပါက သက်ဆိုင်ရာ Data များကို Reader Screen သို့ ပို့ပေးပါမည်
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => ReaderScreen(
-                      pitakaTitle:
-                          'ဝိနည်းပိဋကတ်', // သက်ဆိုင်ရာ ပိဋကတ်အမည်ကို ထည့်ပါ
-                      subTitle: item['title']!, // မှန်ကန်သော 'title' key ကို ခေါ်ယူထားပါသည်
-                      chapterTitle: item['title']!, // မှန်ကန်သော 'title' key ကို ခေါ်ယူထားပါသည်
-                      fileName: item['fileName']!, // '1010100.pdf' စသည့် မှန်ကန်သော 'fileName' key ကို ခေါ်ယူထားပါသည်
+                      pitakaTitle: pitakaTitle, 
+                      subTitle: item['title']!, 
+                      chapterTitle: item['title']!, 
+                      fileName: item['fileName']!, 
                     ),
                   ),
                 );

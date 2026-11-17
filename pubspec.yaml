@@ -41,7 +41,8 @@ dependencies:
   path_provider: ^2.1.6
 
   # PDF Viewer အတွက် Package ကို ဤနေရာ (dependencies အောက်) သို့ ပြောင်းရွှေ့ထားပါသည်
-  syncfusion_flutter_pdfviewer: ^24.1.41 # အောက်က dev_dependencies မှ ပြောင်းရွှေ့လာခြင်းဖြစ်ပါသည်
+
+  syncfusion_flutter_pdfviewer: ^26.2.11 # အောက်က dev_dependencies မှ ပြောင်းရွှေ့လာခြင်းဖြစ်ပါသည်
   http: ^1.2.0
 
 dev_dependencies:
