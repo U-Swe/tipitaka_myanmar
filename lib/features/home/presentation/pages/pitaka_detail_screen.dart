@@ -51,7 +51,6 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၂။ ဒုတိယ ပါရာဇိက',
                   '၃။ တတိယ ပါရာဇိက',
                   '၄။ စတုတ္ထ ပါရာဇိက',
-                  'ပါရာဇိက အကျဉ်းချုပ်',
                 ];
               } else if (subTitle.contains('သံဃာဒိသိသ်')) {
                 chapters = [
@@ -68,14 +67,9 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၁၁။ ဘေဒါနုဝတ္တကသိက္ခာပုဒ်',
                   '၁၂။ ဒုဗ္ဗစသိက္ခာပုဒ်',
                   '၁၃။ ကုလဒူသကသိက္ခာပုဒ်',
-                  'သံဃာဒိသိသ် အကျဉ်းချုပ်',
                 ];
               } else if (subTitle.contains('၃။ အနိယတ')) {
-                chapters = [
-                  '၁။ ပဌမအနိယတသိက္ခာပုဒ်',
-                  '၂။ ဒုတိယအနိယတသိက္ခာပုဒ်',
-                  'အနိယတသိက္ခာပုဒ်  အကျဉ်းချုပ်',
-                ];
+                chapters = ['၁။ ပဌမအနိယတသိက္ခာပုဒ်', '၂။ ဒုတိယအနိယတသိက္ခာပုဒ်'];
               } else if (subTitle.contains('၄။ နိဿဂ္ဂိယ')) {
                 chapters = ['၁။ စီဝရဝဂ်', '၂။ ကောသိယဝဂ်', '၃။ ပတ္တဝဂ်'];
               }
@@ -120,7 +114,6 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၀၈။ အစ္စေကစီဝရသိက္ခာပုဒ်',
                   '၀၉။ သာသင်္ကသိက္ခာပုဒ်',
                   '၁၀။ ပရိဏတသိက္ခာပုဒ်',
-                  'နိဿဂ္ဂိယ (တတိယဝဂ်) ပတ္တဝဂ် အကျဉ်းချုပ်',
                 ];
               } else if (subTitle.contains('၅။ ဝိနယပိဋက') ||
                   subTitle == 'ဝိနယပိဋက') {
