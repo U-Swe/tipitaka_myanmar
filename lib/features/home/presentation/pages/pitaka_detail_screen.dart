@@ -86,7 +86,6 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၀၈။ ဥပက္ခဋသိက္ခာပုဒ်',
                   '၀၉။ ဒုတိယဥပက္ခဋသိက္ခာပုဒ်',
                   '၁၀။ ရာဇသိက္ခာပုဒ်',
-                  'နိဿဂ္ဂိယ စီဝရဝဂ် အကျဉ်းချုပ်',
                 ];
               } else if (subTitle.contains('၂။ ကောသိယဝဂ်')) {
                 chapters = [
@@ -100,7 +99,6 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၀၈။ ရူပိယသိက္ခာပုဒ်',
                   '၀၉။ ရူပိယသံဝေါဟာရသိက္ခာပုဒ်',
                   '၁၀။ ကယဝိက္ကယသိက္ခာပုဒ်',
-                  'နိဿဂ္ဂိယ ကောသိယဝဂ် အကျဉ်းချုပ်',
                 ];
               } else if (subTitle.contains('၃။ ပတ္တဝဂ်')) {
                 chapters = [
@@ -126,7 +124,6 @@ class PitakaDetailScreen extends StatelessWidget {
                 ];
               } else if (subTitle.contains('ဘိက္ခုဝိဘင်း')) {
                 chapters = [
-                  'ဘိက္ခုဝိဘင်း',
                   '၀၁။ မုသာဝါဒဝဂ်',
                   '၀၂။ ဘူတဂါမဝဂ်',
                   '၀၃။ ဩဝါဒဝဂ်',
@@ -149,7 +146,6 @@ class PitakaDetailScreen extends StatelessWidget {
                 ];
               } else if (subTitle.contains('မဟာဝဂ္ဂ')) {
                 chapters = [
-                  'မဟာဝဂ္ဂ',
                   '၀၁။ မဟာခန္ဓက',
                   '၀၂။ ဥပေါသထက္ခန္ဓက',
                   '၀၃။ ဝဿူပနာယိကက္ခန္ဓက',
@@ -163,7 +159,6 @@ class PitakaDetailScreen extends StatelessWidget {
                 ];
               } else if (subTitle.contains('စူဠဝဂ္ဂ')) {
                 chapters = [
-                  'စူဠဝဂ္ဂ',
                   '၀၁။ ကမ္မက္ခန္ဓက',
                   '၀၂။ ပါရိဝါသိကက္ခန္ဓက',
                   '၀၃။ သမုစ္စယက္ခန္ဓက',
@@ -179,9 +174,9 @@ class PitakaDetailScreen extends StatelessWidget {
                 ];
               } else if (subTitle.contains('ပရိဝါရ')) {
                 chapters = [
-                  'ပရိဝါရ',
-                  'သမုဋ္ဌာန် ခေါင်းစဥ် အကျဥ်း',
-                  'အန္တရပေယျာလ',
+                  '၁။ ပရိဝါရ',
+                  '၂။ သမုဋ္ဌာန် ခေါင်းစဥ် အကျဥ်း',
+                  '၃။ အန္တရပေယျာလ',
                 ];
               } else if (subTitle.contains('သုတ္တန္တပိဋက')) {
                 chapters = [

@@ -102,9 +102,9 @@ class PitakaData {
       {'title': '၁၁။ ပဉ္စသတိကာက္ခန္ဓက', 'fileName': '105411.pdf'},
       {'title': '၁၂။ သတ္တသတိကာက္ခန္ဓက', 'fileName': '105412.pdf'},
 
-      {'title': 'ပရိဝါရ', 'fileName': '105501.pdf'},
-      {'title': 'သမုဋ္ဌာန် ခေါင်းစဥ် အကျဥ်း', 'fileName': '105502.pdf'},
-      {'title': 'အန္တရပေယျာလ', 'fileName': '105503.pdf'},
+      {'title': '၁။ ပရိဝါရ', 'fileName': '105501.pdf'},
+      {'title': '၂။ သမုဋ္ဌာန် ခေါင်းစဥ် အကျဥ်း', 'fileName': '105502.pdf'},
+      {'title': '၃။ အန္တရပေယျာလ', 'fileName': '105503.pdf'},
     ],
     'သုတ္တန္တပိဋကတ်': [
       {'title': 'ဒီဃနိကာယ', 'fileName': '2011100.pdf'},
@@ -112,8 +112,8 @@ class PitakaData {
       {'title': 'သံယုတ္တနိကာယ', 'fileName': '2010300.pdf'},
       {'title': 'အင်္ဂုတ္တရနိကာယ', 'fileName': '2010400.pdf'},
       {'title': 'ခုဒ္ဒကနိကာယ', 'fileName': '2010500.pdf'},
-      {'title': 'သီလက္ခန္ဓဝဂ္ဂ', 'fileName': '2010600.pdf'},
 
+      {'title': 'သီလက္ခန္ဓဝဂ္ဂ', 'fileName': '201100.pdf'},
       {'title': '၀၁။ ဗြဟ္မဇာလသုတ်', 'fileName': '201101.pdf'},
       {'title': '၀၂။ သာမညဖလသုတ်', 'fileName': '201002.pdf'},
       {'title': '၀၃။ အမ္ဗဋ္ဌသုတ်', 'fileName': '201103.pdf'},
