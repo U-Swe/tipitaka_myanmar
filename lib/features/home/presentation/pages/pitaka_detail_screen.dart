@@ -116,13 +116,13 @@ class PitakaDetailScreen extends StatelessWidget {
               } else if (subTitle.contains('၅။ ဝိနယပိဋက') ||
                   subTitle == 'ဝိနယပိဋက') {
                 chapters = [
-                  'ဘိက္ခုဝိဘင်း',
-                  'ဘိက္ခုနီဝိဘင်း',
-                  'မဟာဝဂ္ဂ',
-                  'စူဠဝဂ္ဂ',
-                  'ပရိဝါရ',
+                  '၁။ ဘိက္ခုဝိဘင်း',
+                  '၂။ ဘိက္ခုနီဝိဘင်း',
+                  '၃။ မဟာဝဂ္ဂ',
+                  '၄။ စူဠဝဂ္ဂ',
+                  '၅။ ပရိဝါရ',
                 ];
-              } else if (subTitle.contains('ဘိက္ခုဝိဘင်း')) {
+              } else if (subTitle.contains('၁။ ဘိက္ခုဝိဘင်း')) {
                 chapters = [
                   '၀၁။ မုသာဝါဒဝဂ်',
                   '၀၂။ ဘူတဂါမဝဂ်',
@@ -134,7 +134,7 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၀၈။ သဟဓမ္မိကဝဂ်',
                   '၀၉။ ရတနဝဂ်',
                 ];
-              } else if (subTitle.contains('ဘိက္ခုနီဝိဘင်း')) {
+              } else if (subTitle.contains('၂။ ဘိက္ခုနီဝိဘင်း')) {
                 chapters = [
                   '၀၁။ ပါရာဇိက အခန်း',
                   '၀၂။ သံဃာဒိသိသ် အခန်း',
@@ -144,7 +144,7 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၀၆။ သေခိယ အခန်း',
                   '၀၇။ အဓိကရဏသမထ အခန်း',
                 ];
-              } else if (subTitle.contains('မဟာဝဂ္ဂ')) {
+              } else if (subTitle.contains('၃။ မဟာဝဂ္ဂ')) {
                 chapters = [
                   '၀၁။ မဟာခန္ဓက',
                   '၀၂။ ဥပေါသထက္ခန္ဓက',
@@ -157,7 +157,7 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၀၉။ စမ္ပေယျက္ခန္ဓက',
                   '၁၀။ ကောသမ္ဗကက္ခန္ဓက',
                 ];
-              } else if (subTitle.contains('စူဠဝဂ္ဂ')) {
+              } else if (subTitle.contains('၄။ စူဠဝဂ္ဂ')) {
                 chapters = [
                   '၀၁။ ကမ္မက္ခန္ဓက',
                   '၀၂။ ပါရိဝါသိကက္ခန္ဓက',
@@ -172,9 +172,9 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၁၁။ ပဉ္စသတိကာက္ခန္ဓက',
                   '၁၂။ သတ္တသတိကာက္ခန္ဓက',
                 ];
-              } else if (subTitle.contains('ပရိဝါရ')) {
+              } else if (subTitle.contains('၅။ ပရိဝါရ')) {
                 chapters = [
-                  '၁။ ပရိဝါရ',
+                  '၁။ ပရိဝါရ ',
                   '၂။ သမုဋ္ဌာန် ခေါင်းစဥ် အကျဥ်း',
                   '၃။ အန္တရပေယျာလ',
                 ];
@@ -187,12 +187,7 @@ class PitakaDetailScreen extends StatelessWidget {
                   'ခုဒ္ဒကနိကာယ',
                 ];
               } else if (subTitle.contains('ဒီဃနိကာယ')) {
-                chapters = [
-                  'သီလက္ခန္ဓဝဂ္ဂ',
-                  'မဟာဝဂ္ဂ',
-                  'ပါထိကဝဂ္ဂ',
-                  'ခုဒ္ဒကနိကာယ',
-                ];
+                chapters = ['သီလက္ခန္ဓဝဂ္ဂ', 'မဟာဝဂ္ဂ', 'ပါထိကဝဂ္ဂ'];
               } else if (subTitle.contains('သီလက္ခန္ဓဝဂ္ဂ')) {
                 chapters = [
                   'သီလက္ခန္ဓဝဂ္ဂ',
