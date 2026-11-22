@@ -180,15 +180,15 @@ class PitakaDetailScreen extends StatelessWidget {
                 ];
               } else if (subTitle.contains('သုတ္တန္တပိဋက')) {
                 chapters = [
-                  'ဒီဃနိကာယ',
-                  'မဇ္ဈိမနိကာယ',
-                  'သံယုတ္တနိကာယ',
-                  'အင်္ဂုတ္တရနိကာယ',
-                  'ခုဒ္ဒကနိကာယ',
+                  '၁။ ဒီဃနိကာယ',
+                  '၂။ မဇ္ဈိမနိကာယ',
+                  '၃။ သံယုတ္တနိကာယ',
+                  '၄။ အင်္ဂုတ္တရနိကာယ',
+                  '၅။ ခုဒ္ဒကနိကာယ',
                 ];
-              } else if (subTitle.contains('ဒီဃနိကာယ')) {
-                chapters = ['သီလက္ခန္ဓဝဂ္ဂ', 'မဟာဝဂ္ဂ', 'ပါထိကဝဂ္ဂ'];
-              } else if (subTitle.contains('သီလက္ခန္ဓဝဂ္ဂ')) {
+              } else if (subTitle.contains('၁။ ဒီဃနိကာယ')) {
+                chapters = ['၁။ သီလက္ခန္ဓဝဂ္ဂ', '၂။ မဟာဝဂ္ဂ', '၃။ ပါထိကဝဂ္ဂ'];
+              } else if (subTitle.contains('၁။ သီလက္ခန္ဓဝဂ္ဂ')) {
                 chapters = [
                   'သီလက္ခန္ဓဝဂ္ဂ',
                   '၀၁။ ဗြဟ္မဇာလသုတ်',
@@ -205,7 +205,7 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၁၂။ လောဟိစ္စသုတ်',
                   '၁၃။ တေဝိဇ္ဇသုတ်',
                 ];
-              } else if (subTitle.contains('မဟာဝဂ္ဂ')) {
+              } else if (subTitle.contains('၂။ မဟာဝဂ္ဂ')) {
                 chapters = [
                   'မဟာဝဂ္ဂ',
                   '၀၁။ မဟာပဒါနသုတ်',
@@ -219,7 +219,7 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၀၉။ မဟာသတိပဋ္ဌာနသုတ်',
                   '၁၀။ ပါယာသိသုတ်',
                 ];
-              } else if (subTitle.contains('ပါထိကဝဂ္ဂ')) {
+              } else if (subTitle.contains('၃။ ပါထိကဝဂ္ဂ')) {
                 chapters = [
                   'ပါထိကဝဂ္ဂ',
                   '၀၁။ ပါထိကသုတ်',
@@ -234,16 +234,16 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၁၀။ သင်္ဂီတိသုတ်',
                   '၁၁။ ဒသုတ္တရသုတ်',
                 ];
-              } else if (subTitle.contains('မဇ္ဈိမနိကာယ')) {
+              } else if (subTitle.contains('၂။ မဇ္ဈိမနိကာယ')) {
                 chapters = [
                   'မူလပဏ္ဏာသ',
                   'မဇ္ဈိမပဏ္ဏာသ',
                   'ဥပရိပဏ္ဏာသ',
                   'သဂါထာဝဂ္ဂ',
                 ];
-              } else if (subTitle.contains('သံယုတ္တနိကာယ')) {
+              } else if (subTitle.contains('၃။ သံယုတ္တနိကာယ')) {
                 chapters = ['နိဒါနဝဂ္ဂ', 'ခန္ဓဝဂ္ဂ', 'သဠာယတနဝဂ္ဂ', 'မဟာဝဂ္ဂ'];
-              } else if (subTitle.contains('အင်္ဂုတ္တရနိကာယ')) {
+              } else if (subTitle.contains('၄။ အင်္ဂုတ္တရနိကာယ')) {
                 chapters = [
                   'ဧကကနိပါတ်',
                   'ဒုကနိပါတ်',
@@ -257,7 +257,7 @@ class PitakaDetailScreen extends StatelessWidget {
                   'ဒသကနိပါတ်',
                   'ဧကာဒသကနိပါတ်',
                 ];
-              } else if (subTitle.contains('ခုဒ္ဒကနိကာယ')) {
+              } else if (subTitle.contains('၅။ ခုဒ္ဒကနိကာယ')) {
                 chapters = [
                   'ခုဒ္ဒကပါဌ',
                   'ဓမ္မပဒ',
@@ -277,7 +277,6 @@ class PitakaDetailScreen extends StatelessWidget {
                 chapters = ['ဓမ္မသင်္ဂဏီ', 'ဝိဘင်္ဂ', 'ပုဂ္ဂလပညတ်', 'ကထာဝတ္ထု'];
               } else if (subTitle.contains('ဓမ္မသင်္ဂဏီ')) {
                 chapters = [
-                  'ဓမ္မသင်္ဂဏီ',
                   'မာတိကာ',
                   '၁။ စိတ္တုပ္ပါဒကဏ္ဍ',
                   '၂။ ရူပကဏ္ဍ',
@@ -309,8 +308,7 @@ class PitakaDetailScreen extends StatelessWidget {
                 chapters = ['ပုဂ္ဂလပညတ်', 'မာတိကာ', 'နိဒ္ဒေသ'];
               } else if (subTitle.contains('ကထာဝတ္ထု')) {
                 chapters = [
-                  'ကထာဝတ္ထု',
-                  '၀၁။ ပုဂ္ဂလကထာ',
+                  '၀၁။ ပုဂ္ဂလကထာ >',
                   '၀၂။ ဒုတိယဝဂ်',
                   '၀၃။ တတိယဝဂ်',
                   '၀၄။ စတုတ္ထဝဂ်',
@@ -334,7 +332,7 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၂၂။ ဗာဝီသတိမဝဂ်',
                   '၂၃။ တေဝီသတိမဝဂ်',
                 ];
-              } else if (subTitle.contains('၀၁။ ပုဂ္ဂလကထာ')) {
+              } else if (subTitle.contains('၀၁။ ပုဂ္ဂလကထာ >')) {
                 chapters = [
                   '၀၁။ ပုဂ္ဂလကထာ',
                   '၀၂။ ပရိယာနိကထာ',
