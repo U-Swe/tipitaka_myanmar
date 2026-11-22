@@ -283,7 +283,7 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၃။ နိက္ခေပကဏ္ဍ',
                   '၄။ အဋ္ဌကထာကဏ္ဍ',
                 ];
-              } else if (subTitle.contains('ဝိဘင်္ဂ')) {
+              } else if (subTitle.contains('၂။ ဝိဘင်္ဂ')) {
                 chapters = [
                   '၀၁။ ခန္ဓ ဝိဘင်္ဂ',
                   '၀၂။ အာယတန ဝိဘင်္ဂ',
