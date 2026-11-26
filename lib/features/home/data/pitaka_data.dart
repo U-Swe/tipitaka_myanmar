@@ -157,10 +157,10 @@ class PitakaData {
       {'title': 'ဥပရိပဏ္ဏာသ', 'fileName': '202003.pdf'},
       {'title': 'သဂါထာဝဂ္ဂ', 'fileName': '202004.pdf'},
 
-      {'title': 'နိဒါနဝဂ္ဂ', 'fileName': '203101.pdf'},
-      {'title': 'ခန္ဓဝဂ္ဂ', 'fileName': '203102.pdf'},
-      {'title': 'သဠာယတနဝဂ္ဂ', 'fileName': '203103.pdf'},
-      {'title': 'မဟာဝဂ္ဂ', 'fileName': '203104.pdf'},
+      {'title': 'နိဒါနဝဂ္ဂ', 'fileName': '203001.pdf'},
+      {'title': 'ခန္ဓဝဂ္ဂ', 'fileName': '203002.pdf'},
+      {'title': 'သဠာယတနဝဂ္ဂ', 'fileName': '203003.pdf'},
+      {'title': 'မဟာဝဂ္ဂ', 'fileName': '203004.pdf'},
 
       {'title': 'ဧကကနိပါတ်', 'fileName': '204101.pdf'},
       {'title': 'ဒုကနိပါတ်', 'fileName': '204102.pdf'},
@@ -219,7 +219,7 @@ class PitakaData {
       {'title': '၁၇။ ခုဒ္ဒကဝတ္ထု ဝိဘင်္ဂ', 'fileName': '302017.pdf'},
       {'title': '၁၈။ ဓမ္မဟဒယ ဝိဘင်္ဂ', 'fileName': '302018.pdf'},
 
-      {'title': 'မာတိကာ', 'fileName': '303001.pdf'},
+      {'title': 'ပုဂ္ဂလပညတ် မာတိကာ', 'fileName': '303001.pdf'},
       {'title': 'နိဒ္ဒေသ', 'fileName': '303002.pdf'},
 
       {'title': '၀၁။ ပုဂ္ဂလကထာ', 'fileName': '304101.pdf'},

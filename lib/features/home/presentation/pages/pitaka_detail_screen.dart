@@ -304,8 +304,8 @@ class PitakaDetailScreen extends StatelessWidget {
                   '၁၇။ ခုဒ္ဒကဝတ္ထု ဝိဘင်္ဂ',
                   '၁၈။ ဓမ္မဟဒယ ဝိဘင်္ဂ',
                 ];
-              } else if (subTitle.contains('ပုဂ္ဂလပညတ်')) {
-                chapters = ['ပုဂ္ဂလပညတ်', 'မာတိကာ', 'နိဒ္ဒေသ'];
+              } else if (subTitle.contains('၃။ ပုဂ္ဂလပညတ်')) {
+                chapters = ['ပုဂ္ဂလပညတ် မာတိကာ', 'နိဒ္ဒေသ'];
               } else if (subTitle.contains('ကထာဝတ္ထု')) {
                 chapters = [
                   '၀၁။ ပုဂ္ဂလကထာ >',
